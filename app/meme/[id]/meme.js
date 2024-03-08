@@ -1,6 +1,5 @@
 "use client";
 
-import { data } from "autoprefixer";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -21,7 +20,8 @@ const Meme = ({ singleMeme }) => {
   return (
     <div className="text-center">{
         showImage?'':<>
-      <Image src={singleMeme.url} className="mx-auto" width={500} height={500} />
+      <img src={singleMeme.url} className="mx-auto w-[500px] h-[500px] " />
+      {/* <Image src={singleMeme.url} className="mx-auto" width={500} height={500} /> */}
       <div className="mt-5 mb-5">
 
       <input
@@ -47,7 +47,8 @@ const Meme = ({ singleMeme }) => {
         }
 
       {/* {data? data:''} */}
-      {showImage ? <Image src={showImageurl} className="mx-auto" width={500} height={500} /> : ""}
+      {showImage ? <img src={showImageurl} className="mx-auto w-[500px] h-[500px] " /> : ""}
+      {/* {showImage ? <Image src={showImageurl} className="mx-auto" width={500} height={500} /> : ""} */}
     </div>
   );
 };
